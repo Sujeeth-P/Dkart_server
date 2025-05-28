@@ -3,7 +3,8 @@ import mongoose from 'mongoose';
 
 const connectDB = () => {   
     try{
-        mongoose.connect("mongodb://localhost:27017/dkart")
+        // mongodb://localhost:27017/dkart
+        mongoose.connect("mongodb+srv://sujeeth9487:sujeeth@ecom.k3kfpyx.mongodb.net/?retryWrites=true&w=majority&appName=ecom/dkart")
         console.log("MongoDB connected successfully");
         
     }
