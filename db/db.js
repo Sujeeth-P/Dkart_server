@@ -3,8 +3,8 @@ import mongoose from 'mongoose';
 
 const connectDB = () => {   
     try{
-        // mongodb://localhost:27017/dkart
-        mongoose.connect("mongodb+srv://sujeeth9487:sujeeth@ecom.k3kfpyx.mongodb.net/?retryWrites=true&w=majority&appName=ecom/dkart")
+        // Using a clean test database to avoid index conflicts
+        mongoose.connect("mongodb+srv://sujeeth9487:sujeeth@ecom.k3kfpyx.mongodb.net/dkart-test?retryWrites=true&w=majority&appName=ecom")
         console.log("MongoDB connected successfully");
         
     }

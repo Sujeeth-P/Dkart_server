@@ -2,9 +2,11 @@ import mongoose from "mongoose";
 import bcrypt from 'bcryptjs';
 
 const SignupSchema = new mongoose.Schema({
-  name: {type: String,require: true},
-  email: {type: String,require: true},
-  password: {type: String,require: true}
+  name: {type: String, required: true},
+  email: {type: String, required: true, unique: true},
+  password: {type: String, required: true}
+}, {
+  timestamps: true
 })
 
 
