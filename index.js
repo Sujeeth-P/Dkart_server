@@ -2,6 +2,7 @@ import connectDB from "./db/db.js";
 import express from 'express'
 import cors from 'cors'
 import route from './routes/routes.js'
+import adminRoutes from './routes/adminRoutes.js'
 
 //delcration
 const PORT = process.env.PORT || 5000
@@ -14,6 +15,7 @@ connectDB()
 app.use(express.json())
 app.use(cors());
 app.use('/ecommerce', route)
+app.use('/admin', adminRoutes)
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 })
